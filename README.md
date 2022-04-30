@@ -6,21 +6,18 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
-
-(Diagrams/Elk-Stack-Project-Diagram.png)
+!https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Elk-Stack-Project-Diagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML and Config file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
-  - My First Playbook
-  - Hosts
-  - Ansible Configuration
-  - Ansible Elk Installation and VM Configuration
-  - Filebeat Config
-  - Filebeat Playbook
-  - Metricbeat Config
-  - Metricbeat Playbook
+  - [My First Playbook](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Ansible/pentest.yml)
+  - [Hosts](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Ansible/hosts)
+  - [Ansible Configuration](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Ansible/ansible.cfg)
+  - [Ansible Elk Installation and VM Configuration](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Ansible/install-elk.yml)
+  - [Filebeat Config](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Ansible/Filebeat/filebeat-config.yml)
+  - [Filebeat Playbook](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Ansible/Filebeat/filebeat-playbook.yml)
+  - [Metricbeat Config](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Ansible/Metricbeat/metricbeat-config.yml)
+  - [Metricbeat Playbook](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Ansible/Metricbeat/metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -99,9 +96,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
-
-(Diagrams/Images/Docker_ps.png)
+!https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Docker_ps.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -112,11 +107,9 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
     Filebeat
-    (Diagrams/Images/Filebeat.png)
-    *add screenshot*
+    !https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Filebeat.png
     Metricbeat
-    (Diagrams/Images/Metricbeat.png)
-    *add screenshot*
+    !https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Metricbeat.png
 
 These Beats allow us to collect the following information from each machine:
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
@@ -145,37 +138,21 @@ Answer the following questions to fill in the blanks:
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
 
-+-------------------------------------------------+--------------------------------------------------------+
 | COMMAND                                         | PURPOSE                                                |
-+-------------------------------------------------+--------------------------------------------------------+
+|-------------------------------------------------|--------------------------------------------------------|
 | ssh-keygen                                      | generate SSH key                                       |
-+-------------------------------------------------+--------------------------------------------------------+
 | sudo cat .ssh/id_rsa.pub                        | to view the ssh public key                             |
-+-------------------------------------------------+--------------------------------------------------------+
 | ssh azureuser@ IP Address                       | to log into a machine                                  |
-+-------------------------------------------------+--------------------------------------------------------+
 | sudo docker container list -a                   | list the docker containers                             |
-+-------------------------------------------------+--------------------------------------------------------+
 | sudo docker start sharp_curran                  | start docker container                                 |
-+-------------------------------------------------+--------------------------------------------------------+
 | sudo docker ps -a                               | list active/inactive containers                        |
-+-------------------------------------------------+--------------------------------------------------------+
 | sudo docker attach sharp_curran                 | get a shell in the container                           |
-+-------------------------------------------------+--------------------------------------------------------+
 | nano *filename*                                 | to edit a file                                         |
-+-------------------------------------------------+--------------------------------------------------------+
 | ansible-playbook *filename*                     | to run the playbook (in the same directory)            |
-+-------------------------------------------------+--------------------------------------------------------+
 | sudo docker pull cyberxsecurity/ansible         | to pull the docker container file                      |
-+-------------------------------------------------+--------------------------------------------------------+
 | sudo docker run -ti cyberxsecurity/ansible bash | run and create the docker container image              |
-+-------------------------------------------------+--------------------------------------------------------+
 | ansible -m ping all                             | to check the connection                                |
-+-------------------------------------------------+--------------------------------------------------------+
 | curl -L -O *link to the file*                   | to download a file from the internet                   |
-+-------------------------------------------------+--------------------------------------------------------+
 | dpkg -i *filename*                              | to install the file, used with filebeat and metricbeat |
-+-------------------------------------------------+--------------------------------------------------------+
 | http://20.216.16.108:5601//app/kibana           | navigate to Kibana via ELK server IP address           |
-+-------------------------------------------------+--------------------------------------------------------+
 
