@@ -34,15 +34,15 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
 - What aspect of security do load balancers protect? 
-    Load Balancers protect against server overload by distributing traffic across multple servers. They protect availability. 
+  - Load Balancers protect against server overload by distributing traffic across multple servers. They protect availability. 
 - What is the advantage of a jump box?
-    The major advantage of a jump box is that it prevents the VMs from being exposed to the public. It gives you the option to restict access to certain IP addresses or via certain methods (such as SSH or HTTP). They can also be setup fairly easily.  
+  - The major advantage of a jump box is that it prevents the VMs from being exposed to the public. It gives you the option to restict access to certain IP addresses or via certain methods (such as SSH or HTTP). They can also be setup fairly easily.  
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system metrics.
 - What does Filebeat watch for?
-    Filebeat is a log management tool that watches for system logs and is a way to centralize the logs and files. 
+  - Filebeat is a log management tool that watches for system logs and is a way to centralize the logs and files. 
 - What does Metricbeat record?
-    Metricbeat is a monitoring tool that records metrcis from the systems or services and can send that output where neccessary. 
+  - Metricbeat is a monitoring tool that records metrcis from the systems or services and can send that output where neccessary. 
 
 
 The configuration details of each machine may be found below.
@@ -60,13 +60,13 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-    My workstation's public IP address (using a VPN so IP changes)
+- My workstation's public IP address (using a VPN so IP changes)
 
 Machines within the network can only be accessed by SSH through the Jump Box.
 - Which machine did you allow to access your ELK VM? 
-    JumpBox VM (IP: 10.0.0.4) through SSH (p 22)
+  - JumpBox VM (IP: 10.0.0.4) through SSH (p 22)
 - What was its IP address?
-    IP address of my Workstation could access through TCP 5601
+  - IP address of my Workstation could access through TCP 5601
 
 
 A summary of the access policies in place can be found in the table below.
@@ -82,7 +82,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it lets you quickly deploy the ELK stack through playbooks 
 - What is the main advantage of automating configuration with Ansible?
-    In addition to being able to quickly deploy, it also can prevent human errors and simplifies the deployment process. 
+  - In addition to being able to quickly deploy, it also can prevent human errors and simplifies the deployment process. 
 
 The playbook implements the following tasks:
 - In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
@@ -101,20 +101,20 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - List the IP addresses of the machines you are monitoring
-    Web-1 (10.0.0.5)
-    Web-2 (10.0.0.6)
+  - Web-1 (10.0.0.5)
+  - Web-2 (10.0.0.6)
 
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
-    Filebeat
+- Filebeat
     ![Filebeat Data](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Filebeat.png)
-    Metricbeat
+- Metricbeat
     ![Metricbeat Data](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Metricbeat.png)
 
 These Beats allow us to collect the following information from each machine:
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-    Filebeat collects logs from files and can be used to track and monitor log messages
-    Metricbeat collects metric data and can be used to track system metrics. For example, CPU usage and Memory usage. 
+  - Filebeat collects logs from files and can be used to track and monitor log messages
+  - Metricbeat collects metric data and can be used to track system metrics. For example, CPU usage and Memory usage. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -127,14 +127,14 @@ SSH into the control node and follow the steps below:
 
 Answer the following questions to fill in the blanks:
 - Which file is the playbook? Where do you copy it?
-   The playbook is the '*-playbook.yml' file. It is written in YAML and copies the config file from the source to the webserver VMs (Web-1 and Web-2) in the /etc/filebeat folder or /etc/metricbeat depending on the playbook
+  - The playbook is the '-playbook.yml' file. It is written in YAML and copies the config file from the source to the webserver VMs (Web-1 and Web-2) in the /etc/filebeat folder or /etc/metricbeat depending on the playbook
 
 - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-    Update the playbook to make sure it runs on a specific server. Within the playbook YAML file, you must define the hosts in which the playbook will run. In our situation for Filebeat, the hosts was defined as 'webservers' which is our Web-1 and Web-2 machine. However, our install_elk.yml playbook defined the hosts as elk, which specifies our ELK server rather than our webservers. 
+  - Update the playbook to make sure it runs on a specific server. Within the playbook YAML file, you must define the hosts in which the playbook will run. In our situation for Filebeat, the hosts was defined as 'webservers' which is our Web-1 and Web-2 machine. However, our install_elk.yml playbook defined the hosts as elk, which specifies our ELK server rather than our webservers. 
 
 - Which URL do you navigate to in order to check that the ELK server is running?
-    localhost:5601/app/kibana
-    localhost of ELK Server is 20.216.16.108
+  - localhost:5601/app/kibana
+  - localhost of ELK Server is 20.216.16.108
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
 
