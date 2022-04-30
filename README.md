@@ -96,7 +96,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-[Elk Docker PS](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Docker_ps.png)
+![Elk Docker PS](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -107,9 +107,9 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
     Filebeat
-    (https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Filebeat.png)
+    ![Filebeat Data](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Filebeat.png)
     Metricbeat
-    (https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Metricbeat.png)
+    ![Metricbeat Data](https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Metricbeat.png)
 
 These Beats allow us to collect the following information from each machine:
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
