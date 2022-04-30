@@ -6,7 +6,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Elk-Stack-Project-Diagram.png
+(https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Elk-Stack-Project-Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML and Config file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -96,7 +96,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Docker_ps.png
+(https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -107,9 +107,9 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed
     Filebeat
-    https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Filebeat.png
+    (https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Filebeat.png)
     Metricbeat
-    https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Metricbeat.png
+    (https://github.com/gabedigi20/Elk-Stack-Project/blob/main/Diagrams/Images/Metricbeat.png)
 
 These Beats allow us to collect the following information from each machine:
 - In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
